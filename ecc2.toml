@@ -1,0 +1,18 @@
+default_agent = "claude"
+
+[harness_runners.purpleguard]
+program = "python"
+base_args = [
+    "/data/data/com.termux/files/home/PurpleGuardAI/purpleguard_runner.py"
+]
+cwd_flag = "--cwd"
+task_flag = "--task"
+
+project_markers = [
+    "pyproject.toml",
+    "Cargo.toml",
+    "package.json"
+]
+
+[harness_runners.purpleguard.env]
+ECC_HARNESS = "purpleguard"
